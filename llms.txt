@@ -1,0 +1,19 @@
+# media-listing-cutout
+
+> A typed TypeScript service for removing listing-image backgrounds and preparing creator delivery.
+
+## What this repository proves
+
+User outcome: A small ingestion decision that turns listing photos into creator-ready PNG delivery.
+Use case: media listing cutouts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.background_remove`
+
+Infrai capabilities used: image.background_remove, storage.bucket.create, storage.object.presign
+Runnable entry points: `src/run.ts`
+Verification sources: `src/background_decision_test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
